@@ -18,11 +18,12 @@ Page({
           url: 'https://qc37rv.api.cloudendpoint.cn/getdata',
           method:'GET',
           data:{
-            type:2,
+            place:1,
           },
           success(res){
+            console.log(res.data)
             that.setData({
-                list : res.data
+                list : res.data.list
             })
           }
         })
