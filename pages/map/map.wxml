@@ -18,8 +18,8 @@
 <view class="list_area">
 <!-- switch button -->
 <view class="switch_area">
-    <button size="mini" class="switch_btn">点击切换校区</button>
-    <view class="location_info">当前校区：兴庆校区</view>
+    <button size="mini" class="switch_btn" bindtap="change_area"> 点击切换校区</button>
+    <view class="location_info">当前校区：{{area[type]}}</view>
 </view>
 <!-- list head -->
 <view class='box'>
@@ -35,4 +35,6 @@
     </view>
 </block>
 </view>
+<view class="bottom_text">点击加号提交实时情况！</view>
+<view class="bottom_text">您的信息可以帮助更多同学</view>
 <include src="/pages/bottom_menu/bottom_menu" />

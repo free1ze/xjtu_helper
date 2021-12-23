@@ -7,18 +7,23 @@ Page({
     data: {
         list:[],
         type:2,
+        area:{"1":'兴庆校区-宪梓堂', "2":'雁塔校区-生活区'},
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        var that = this;
+        this.get_data();
+    },
+
+    get_data:function(){
+      var that = this;
         wx.request({
           url: 'https://qc37rv.api.cloudendpoint.cn/getdata',
           method:'GET',
           data:{
-            place:1,
+            place:that.data.type,
           },
           success(res){
             console.log(res.data)
@@ -91,5 +96,19 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+    change_area:function(){
+      var that = this;
+      wx.showActionSheet({
+        itemList: ['兴庆校区-宪梓堂', '雁塔校区-生活区'],
+        success(res){
+          that.setData({
+            type:res.tapIndex+1,
+          },()=>{
+            that.get_data();
+          })
+        }
+      },
+      )
     }
 })

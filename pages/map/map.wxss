@@ -63,3 +63,8 @@
     border-left: 3rpx solid #000000;
     /* border-right: 3rpx solid #000000; */
  }
+
+ .bottom_text{
+    text-align: center;
+    color: #2222e0;
+ }
