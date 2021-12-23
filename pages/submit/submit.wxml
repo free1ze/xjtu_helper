@@ -1,6 +1,18 @@
 <!--pages/submit/submit.wxml-->
 <image class="img" src="/imgs/map.png" mode="widthFix"></image>
 
+<view class="top_pic">  
+  <swiper class = "top_pic" indicator-dots="true">      
+   <swiper-item>  
+                <image class="top_pic" src="/imgs/2.png"></image>      
+    </swiper-item>    
+    <swiper-item>   
+               <image class="top_pic" src="/imgs/1.png"></image>      </swiper-item> 
+    <!-- <swiper-item>     
+                <image src="/imgs/map.png"></image>      </swiper-item>   -->
+</swiper>
+</view>
+
 
 <view class="section">
  <view class="section__title">地区选择器</view>
