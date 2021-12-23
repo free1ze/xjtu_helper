@@ -1,6 +1,4 @@
 <!--pages/submit/submit.wxml-->
-<image class="img" src="/imgs/map.png" mode="widthFix"></image>
-
 <view class="top_pic">  
   <swiper class = "top_pic" indicator-dots="true">      
    <swiper-item>  
@@ -13,29 +11,33 @@
 </swiper>
 </view>
 
-
+<view class="submit_area">
 <view class="section">
- <view class="section__title">地区选择器</view>
- <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
- <view class="picker">
-  当前选择：{{array[index]}}
+ <view class="section_title">选择校区</view>
+ <view class="instruction">（点击右侧选择）</view>
+ <picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+ <view class="picker_view">
+  {{array[index]}}
  </view>
  </picker>
 </view>
 <view class="section">
- <view class="section__title">时间选择器</view>
- <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
- <view class="picker">
-  当前选择: {{time}}
+ <view class="section_title">选择校区</view>
+ <view class="instruction">（点击右侧选择）</view>
+ <picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+ <view class="picker_view">
+  {{array[index]}}
  </view>
  </picker>
 </view>
- 
 <view class="section">
- <view class="section__title">日期选择器</view>
- <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
- <view class="picker">
-  当前选择: {{date}}
+ <view class="section_title">选择校区</view>
+ <view class="instruction">（点击右侧选择）</view>
+ <picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+ <view class="picker_view">
+  {{array[index]}}
  </view>
  </picker>
+</view>
+<view class="submit_btn">提交</view>
 </view>
