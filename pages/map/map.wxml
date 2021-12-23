@@ -21,3 +21,4 @@
         <text class="">{{item.remark}}</text>
     </view>
 </block>
+<include src="/pages/bottom_menu/bottom_menu" />
