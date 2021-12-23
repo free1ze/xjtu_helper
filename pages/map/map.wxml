@@ -16,6 +16,11 @@
 
 <!-- <text class="">{{item.time}}</text> -->
 <view class="list_area">
+<!-- switch button -->
+<view class="switch_area">
+    <button size="mini" class="switch_btn">点击切换校区</button>
+    <view class="location_info">当前校区：兴庆校区</view>
+</view>
 <!-- list head -->
 <view class='box'>
     <view class="text_content">发布时间</view>
