@@ -2,23 +2,32 @@
 <!-- <image class="img" src="/imgs/map.png" mode="widthFix">
 </image> -->
 
-<view>  
-  <swiper indicator-dots="true">      
+<view class="top_pic">  
+  <swiper class = "top_pic" indicator-dots="true">      
    <swiper-item>  
-                <image src="/imgs/2.png"></image>      </swiper-item>    
+                <image class="top_pic" src="/imgs/2.png"></image>      
+    </swiper-item>    
     <swiper-item>   
-               <image src="/imgs/1.png"></image>      </swiper-item> 
+               <image class="top_pic" src="/imgs/1.png"></image>      </swiper-item> 
     <!-- <swiper-item>     
                 <image src="/imgs/map.png"></image>      </swiper-item>   -->
 </swiper>
 </view>
 
 <!-- <text class="">{{item.time}}</text> -->
+<view class="list_area">
+<!-- list head -->
+<view class='box'>
+    <view class="text_content">发布时间</view>
+        <view class="text_content">位置</view>
+        <view class="text_content">预计等待</view>
+</view>
 <block wx:for="{{list}}" wx:for-item="item" wx:for-index="id">
     <view class='box'>
-        <text class="">{{item.time}}</text>
-        <text class="">{{item.point}}</text>
-        <text class="">{{item.remark}}</text>
+        <view class="text_content">{{item.time}}</view>
+        <view class="text_content">{{item.point}}</view>
+        <view class="text_content">{{item.remark}}</view>
     </view>
 </block>
+</view>
 <include src="/pages/bottom_menu/bottom_menu" />

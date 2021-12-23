@@ -1,10 +1,38 @@
 /* pages/map/map.wxss */
 
 @import "/pages/bottom_menu/bottom_menu";
-swiper { 
+.top_pic { 
     width: 100%; 
     height: 500rpx;
 }
-   swiper image { 
-    width: 100%;  height: 500rpx;
+
+.list_area{
+    margin-top: 50rpx;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 500rpx;
+    display: flex;
+    flex-direction: column;
+    /* border: 3rpx solid #000000; */
+}
+ .box{
+    /* width: 90%;  */
+    width: 90%;
+    border: 3rpx solid #000000;
+    height: 60rpx;
+    display: flex;
+    flex-direction: row;
+
+ }
+
+ .text_content{
+    padding-top: 10rpx;
+    font-size: 30rpx;
+    text-align: center;
+    width: 40%;
+    height: 60rpx;
+    border-left: 3rpx solid #000000;
+    border-right: 3rpx solid #000000;
  }
