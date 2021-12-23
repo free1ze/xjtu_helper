@@ -1,0 +1,23 @@
+<!--pages/map/map.wxml-->
+<!-- <image class="img" src="/imgs/map.png" mode="widthFix">
+</image> -->
+
+<view>  
+  <swiper indicator-dots="true">      
+   <swiper-item>  
+                <image src="/imgs/map.png"></image>      </swiper-item>    
+    <swiper-item>   
+               <image src="/imgs/map.png"></image>      </swiper-item> 
+    <swiper-item>     
+                <image src="/imgs/map.png"></image>      </swiper-item>  
+</swiper>
+</view>
+
+<!-- <text class="">{{item.time}}</text> -->
+<block wx:for="{{list}}" wx:for-item="item" wx:for-index="id">
+    <view class='box'>
+        <text class="">{{item.time}}</text>
+        <text class="">{{item.point}}</text>
+        <text class="">{{item.remark}}</text>
+    </view>
+</block>

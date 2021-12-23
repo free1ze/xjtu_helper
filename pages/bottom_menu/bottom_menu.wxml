@@ -1,0 +1,11 @@
+<view class="bottomrow">
+    <view bindtap="first_select" class="bottomtab">
+        <text class="bottomtabText" style="color:{{firco}}">首页</text>
+    </view>
+    <view bindtap="second_select" class="centerimg">
+        <image class="bottomImg" src="http://08.adreq.top/gs/add.png"></image>
+    </view>
+    <view bindtap="third_select" class="bottomtab">
+        <text class="bottomtabText" style="color:{{secco}}">我的</text>
+    </view>
+</view>

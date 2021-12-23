@@ -1,0 +1,31 @@
+.bottomrow {
+    background-color: #fff;
+    bottom: 0rpx;
+    flex-direction: row;
+    height: 9%;
+    position: fixed;
+    width: 100%;
+}
+
+.bottomrow,.bottomtab {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.bottomtab {
+    flex-direction: column;
+    width: 250rpx;
+}
+
+.bottomImg {
+    border-radius: 10rpx;
+    height: 100rpx;
+    margin-top: 10rpx;
+    width: 100rpx;
+}
+
+.bottomtabText {
+    color: #979797;
+    font-size: 35rpx;
+}
