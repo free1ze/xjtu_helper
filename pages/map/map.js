@@ -6,6 +6,7 @@ Page({
      */
     data: {
         list:[],
+        type:2,
     },
 
     /**
@@ -16,6 +17,9 @@ Page({
         wx.request({
           url: 'https://qc37rv.api.cloudendpoint.cn/getdata',
           method:'GET',
+          data:{
+            type:2,
+          },
           success(res){
             that.setData({
                 list : res.data

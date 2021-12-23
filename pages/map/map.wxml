@@ -5,11 +5,11 @@
 <view>  
   <swiper indicator-dots="true">      
    <swiper-item>  
-                <image src="/imgs/map.png"></image>      </swiper-item>    
+                <image src="/imgs/2.png"></image>      </swiper-item>    
     <swiper-item>   
-               <image src="/imgs/map.png"></image>      </swiper-item> 
-    <swiper-item>     
-                <image src="/imgs/map.png"></image>      </swiper-item>  
+               <image src="/imgs/1.png"></image>      </swiper-item> 
+    <!-- <swiper-item>     
+                <image src="/imgs/map.png"></image>      </swiper-item>   -->
 </swiper>
 </view>
 
