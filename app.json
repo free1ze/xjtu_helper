@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/bottom_menu/bottom_menu",
     "pages/map/map",
+    "pages/explain/explain",
     "pages/submit/submit",
     "pages/logs/logs"
   ],

@@ -1,30 +1,17 @@
-// pages/map/map.js
+// pages/explain/explain.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        list:[],
-    },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
-        var that = this;
-        wx.request({
-          url: 'https://qc37rv.api.cloudendpoint.cn/getdata',
-          method:'GET',
-          success(res){
-            that.setData({
-                list : res.data
-            })
-          }
-        })
     },
 
     first_select: function() {
+        wx.navigateBack({
+          delta: 1,
+        })
     },
   
     second_select: function() {
@@ -34,9 +21,13 @@ Page({
     },
   
     third_select: function() {
-      wx.navigateTo({
-        url: '/pages/explain/explain'
-      })
+    },
+
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function (options) {
+
     },
 
     /**

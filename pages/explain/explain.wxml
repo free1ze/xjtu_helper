@@ -1,0 +1,3 @@
+<!--pages/explain/explain.wxml-->
+
+<include src="/pages/bottom_menu/bottom_menu" />

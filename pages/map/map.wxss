@@ -1,4 +1,6 @@
 /* pages/map/map.wxss */
+
+@import "/pages/bottom_menu/bottom_menu";
 swiper { 
     width: 100%; 
     height: 800rpx;

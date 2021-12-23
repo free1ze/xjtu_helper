@@ -1,0 +1,3 @@
+/* pages/explain/explain.wxss */
+
+@import "/pages/bottom_menu/bottom_menu";
