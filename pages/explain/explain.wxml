@@ -1,3 +1,8 @@
 <!--pages/explain/explain.wxml-->
 
 <include src="/pages/bottom_menu/bottom_menu" />
+
+<import src="/wxParse/wxParse.wxml"/>
+<view class='contentarea'>
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
