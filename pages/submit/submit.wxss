@@ -26,7 +26,7 @@
 
 .section_title{
     padding-top: 11rpx;
-    font-size: 25rpx;
+    font-size: 30rpx;
     height: 60rpx;
     width: 20%;
     /* border-left: 3rpx solid #000000; */
@@ -55,7 +55,7 @@
 
 .picker_view{
     width: 300rpx;
-    font-size: 25rpx;
+    font-size: 30rpx;
     height: 40rpx;
     /* border: 3rpx solid #000000; */
     background-color: #009900;

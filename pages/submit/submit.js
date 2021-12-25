@@ -5,10 +5,13 @@ Page({
      * 页面的初始数据
      */
     data: {
-        array:["美国","中国","巴西","日本"],
-        index:0,
-        date:"2016-09-01",
-        time:"12:01"
+        area:["兴庆校区-宪梓堂","雁塔校区-生活区","雁塔校区-教学区体育部"],
+        area_index:0,
+        time:["小于5分钟","10分钟","20分钟","30分钟","45分钟","约1小时","大于1小时","暂未开放","暂停检测","已结束"],
+        time_index:0,
+        place:["1","2","3","4","5","6","7","8","9","10","11","12","13"],
+        place_index:0,
+        submitted:0
         },
         
 
@@ -68,32 +71,65 @@ Page({
 
     },
 
+    presubmit:function(){
+      var that = this;
+      wx.showModal({
+        title:'确认提交',
+        content:'提交信息无法删除，请您再三确认。不要提交错误信息，为了节省同学们的时间，感谢您的配合！',
+        success(res){
+          if(res.confirm)that.submit();
+        }
+      })
+    },
+
     submit: function(){
         var that = this
+        console.log(that.data.submitted)
+        if(that.data.submitted == 1)return;
+        else{
+        that.setData({
+            submitted:1
+        })
         wx.request({
           url: 'https://qc37rv.api.cloudendpoint.cn/submit',
           method:'POST',
           data:{
-              place: that.place,
-              point: that.point,
-              remark: that.remark,
+              place: Number(that.data.area_index)+Number(1),
+              point: that.data.place[that.data.place_index],
+              remark: that.data.time[that.data.time_index],
+          },
+          success(res){
+              console.log(res)
+              wx.showToast({
+                title: '成功',
+                icon:'success',
+                duration: 1000,
+              })
+              setTimeout(() => {
+                wx.reLaunch({
+                  url: '/pages/map/map',
+                })
+              }, 1000);
           }
         })
+    }
     },
-    bindPickerChange: function(e) {
-        console.log('picker发送选择改变，携带值为', e.detail.value)
-        this.setData({
-        index: e.detail.value
-        })
-        },
-        bindDateChange:function(e){
-        this.setData({
-        date:e.detail.value
-        })
-        },
-        bindTimeChange:function(e){
-        this.setData({
-        time:e.detail.time
-        })
-        }
+    bindAreaChange: function(e) {
+    // console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+    area_index: e.detail.value
+    })
+    },
+
+    bindTimeChange:function(e){
+    this.setData({
+    time_index:e.detail.value
+    })
+    },
+
+    bindPlaceChange:function(e){
+    this.setData({
+    place_index:e.detail.value
+    })
+    }
 })

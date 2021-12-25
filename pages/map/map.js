@@ -6,8 +6,8 @@ Page({
      */
     data: {
         list:[],
-        type:2,
-        area:{"1":'兴庆校区-宪梓堂', "2":'雁塔校区-生活区'},
+        type:1,
+        area:{"1":'兴庆校区-宪梓堂', "2":'雁塔校区-生活区',"3":'雁塔校区-教学区体育部'},
     },
 
     /**
@@ -29,6 +29,13 @@ Page({
             console.log(res.data)
             that.setData({
                 list : res.data.list
+            })
+            wx.hideLoading()
+            wx.stopPullDownRefresh()
+            wx.showToast({
+              title: '已更新~',
+              icon:'none',
+              duration:1000
             })
           }
         })
@@ -81,6 +88,7 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
+      this.get_data();
 
     },
 
@@ -100,7 +108,7 @@ Page({
     change_area:function(){
       var that = this;
       wx.showActionSheet({
-        itemList: ['兴庆校区-宪梓堂', '雁塔校区-生活区'],
+        itemList: ['兴庆校区-宪梓堂', '雁塔校区-生活区','雁塔校区-教学区体育部'],
         success(res){
           that.setData({
             type:res.tapIndex+1,

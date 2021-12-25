@@ -1,18 +1,20 @@
 <!--pages/map/map.wxml-->
 <!-- <image class="img" src="/imgs/map.png" mode="widthFix">
 </image> -->
-
-<view class="top_pic">  
+<image class="top_pic" src="/imgs/1.png" wx:if="{{type==1}}"></image>    
+<image class="top_pic" src="/imgs/2.png" wx:if="{{type==2}}"></image>    
+<image class="top_pic" src="/imgs/3.png" wx:if="{{type==3}}"></image>    
+<!-- <view class="top_pic">  
   <swiper class = "top_pic" indicator-dots="true">      
    <swiper-item>  
-                <image class="top_pic" src="/imgs/2.png"></image>      
+                <image class="top_pic" src="/imgs/1.png"></image>      
     </swiper-item>    
     <swiper-item>   
-               <image class="top_pic" src="/imgs/1.png"></image>      </swiper-item> 
-    <!-- <swiper-item>     
-                <image src="/imgs/map.png"></image>      </swiper-item>   -->
+               <image class="top_pic" src="/imgs/2.png"></image>      </swiper-item> 
+    <swiper-item>     
+                <image src="/imgs/map.png"></image>      </swiper-item>  
 </swiper>
-</view>
+</view> -->
 
 <!-- <text class="">{{item.time}}</text> -->
 <view class="list_area">

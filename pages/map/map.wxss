@@ -29,7 +29,8 @@
 .location_info{
     margin-top: 10rpx;
     font-size: 30rpx;
-    color: #8585ad;
+    color: #FF0000;
+    font-weight: bold;
 }
 
 .list_area{

@@ -1,43 +1,47 @@
 <!--pages/submit/submit.wxml-->
-<view class="top_pic">  
+<!-- <view class="top_pic">  
   <swiper class = "top_pic" indicator-dots="true">      
    <swiper-item>  
                 <image class="top_pic" src="/imgs/2.png"></image>      
     </swiper-item>    
     <swiper-item>   
                <image class="top_pic" src="/imgs/1.png"></image>      </swiper-item> 
-    <!-- <swiper-item>     
-                <image src="/imgs/map.png"></image>      </swiper-item>   -->
+    <swiper-item>     
+                <image src="/imgs/map.png"></image>      </swiper-item>  
 </swiper>
-</view>
+</view> -->
+
+<image class="top_pic" src="/imgs/1.png" wx:if="{{area_index==0}}"></image>    
+<image class="top_pic" src="/imgs/2.png" wx:if="{{area_index==1}}"></image>    
+<image class="top_pic" src="/imgs/3.png" wx:if="{{area_index==2}}"></image>    
 
 <view class="submit_area">
 <view class="section">
  <view class="section_title">选择校区</view>
  <view class="instruction">（点击右侧选择）</view>
- <picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+ <picker class="picker" bindchange="bindAreaChange" value="{{area_index}}" range="{{area}}">
  <view class="picker_view">
-  {{array[index]}}
+  {{area[area_index]}}
  </view>
  </picker>
 </view>
 <view class="section">
- <view class="section_title">选择校区</view>
+ <view class="section_title">选择位置</view>
  <view class="instruction">（点击右侧选择）</view>
- <picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+ <picker class="picker" bindchange="bindPlaceChange" value="{{place_index}}" range="{{place}}">
  <view class="picker_view">
-  {{array[index]}}
+  {{place[place_index]}}
  </view>
  </picker>
 </view>
 <view class="section">
- <view class="section_title">选择校区</view>
+ <view class="section_title">选择时间</view>
  <view class="instruction">（点击右侧选择）</view>
- <picker class="picker" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+ <picker class="picker" bindchange="bindTimeChange" value="{{time_index}}" range="{{time}}">
  <view class="picker_view">
-  {{array[index]}}
+  {{time[time_index]}}
  </view>
  </picker>
 </view>
-<view class="submit_btn">提交</view>
+<view class="submit_btn" bindtap="presubmit">保存</view>
 </view>

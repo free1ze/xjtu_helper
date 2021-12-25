@@ -64,9 +64,9 @@ Page({
     onShow: function () {
         // while(!this.article);
         var article = "<h3>\
-        <strong>各位同学：</strong>\
+        <strong>开发者说：</strong>\
     </h3>\
-    疫情当前，没有一个人可以置身事外，弘康运动社基于对当前核酸检测排队久、信息不畅通现状的考虑特别开发本小程序，希望能够减少聚集，帮助大家减少大家无谓的排队时间，请各位同学错峰检测，做好自身防护，戴好口罩，按当日校医院安排的时间和要求有序检测，并带好相关物件（如学生卡、一码通）。<br />\
+    为了解决大家当前核酸检测排队久、信息不畅通的问题,我们联合弘康运动社开发了本小程序，希望能够减少聚集，帮助大家减少大家无谓的排队时间，请各位同学错峰检测，做好自身防护，戴好口罩，按当日校医院安排的时间和要求有序检测，并带好相关物件（如学生卡、一码通）。<br />\
     让我们齐心协力，共克时艰，共同期待寒冬结束的那一天~<br />\
     <p>\
         祝各位同学一切顺利！\
@@ -76,12 +76,25 @@ Page({
     <p>\
     </p>\
     <div style=\"text-align:right;\"> \
-        西安交通大学弘康运动社\
+        西交helper开发组\
     </div>\
+    <div style=\"text-align:right;\"> \
+    西安交通大学弘康运动社\
+</div>\
     <div style=\"text-align:right;\">\
         2021年12月\
     </div>\
-    <br />"
+    <br />\
+    <br />\
+    <br />\
+    <br />\    <br />\    <br />\
+    <p>\
+        遇到问题？加QQ群反馈：810580226 \
+        <br />\
+        【点击复制】\
+    </p>\
+    <br />\
+    "
         var that = this;
         WxParse.wxParse('article', 'html', article, that, 5);
     },
@@ -119,5 +132,18 @@ Page({
      */
     onShareAppMessage: function () {
 
-    }
+    },
+    copy: function(){
+        wx.setClipboardData({
+          data: '810580226', 
+          success: function () {
+              // 添加下面的代码可以复写复制成功默认提示文本`内容已复制` 
+            wx.showToast({
+              title: '已复制群号，打开qq加入',
+              duration: 3000,
+              icon:'none'
+            })
+          }
+        })
+    },
 })
