@@ -37,6 +37,8 @@
     </view>
 </block>
 </view>
+
 <view class="bottom_text">点击加号提交实时情况！</view>
+<view class="bottom_text">下拉可以【刷新】信息！</view>
 <view class="bottom_text">您的信息可以帮助更多同学</view>
 <include src="/pages/bottom_menu/bottom_menu" />
