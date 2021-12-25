@@ -1,5 +1,8 @@
 {
   "usingComponents": {},
   "navigationBarTitleText": "查看队列",
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": true,
+  "navigationBarTextStyle": "black",
+  "backgroundTextStyle": "dark"
+
 }
