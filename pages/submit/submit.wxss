@@ -55,7 +55,7 @@
 
 .picker_view{
     width: 300rpx;
-    font-size: 30rpx;
+    font-size: 26rpx;
     height: 40rpx;
     /* border: 3rpx solid #000000; */
     background-color: #009900;

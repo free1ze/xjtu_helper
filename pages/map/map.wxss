@@ -28,7 +28,7 @@
 
 .location_info{
     margin-top: 10rpx;
-    font-size: 30rpx;
+    font-size: 28rpx;
     color: #FF0000;
     font-weight: bold;
 }

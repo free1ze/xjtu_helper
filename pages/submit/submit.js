@@ -75,7 +75,11 @@ Page({
       var that = this;
       wx.showModal({
         title:'确认提交',
-        content:'提交信息无法删除，请您再三确认。不要提交错误信息，为了节省同学们的时间，感谢您的配合！',
+        content:'提交信息无法删除，请您再三确认。'
+        +'\n【校区】：' +that.data.area[that.data.area_index]
+        +'\n【位置】：' +that.data.place[that.data.place_index]
+        +'\n【时间】：' +that.data.time[that.data.time_index]
+        +'',
         success(res){
           if(res.confirm)that.submit();
         }
