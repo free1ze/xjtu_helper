@@ -72,3 +72,9 @@
     background-color: #009900;
     color: #ffffff;
 }
+
+.bottom_text{
+    margin-top: 10rpx;
+    text-align: center;
+    color: #2222e0;
+ }
