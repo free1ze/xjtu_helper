@@ -5,6 +5,7 @@
 <image class="top_pic" src="/imgs/2.png" wx:if="{{type==2}}"></image>    
 <image class="top_pic" src="/imgs/3.png" wx:if="{{type==3}}"></image>    
 <image class="top_pic" src="/imgs/4.png" wx:if="{{type==4}}"></image>    
+<image class="top_pic" src="/imgs/5.png" wx:if="{{type==5}}"></image>    
 <!-- <view class="top_pic">  
   <swiper class = "top_pic" indicator-dots="true">      
    <swiper-item>  
